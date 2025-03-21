@@ -1,0 +1,608 @@
+{
+  "pages": [
+    {
+      "id": 1,
+      "name": "Home",
+      "logo": "/images/home.jpg",
+      "isSelected": true
+    },
+    {
+      "id": 2,
+      "name": "Vision & Mission",
+      "logo": "/images/vision.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 3,
+      "name": "Why Watson",
+      "logo": "/images/why.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 4,
+      "name": "Courses",
+      "logo": "/images/courses.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 5,
+      "name": "Teachers",
+      "logo": "/images/teachers.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 6,
+      "name": "Admissions",
+      "logo": "/images/admissions.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 7,
+      "name": "Contact",
+      "logo": "/images/contact.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 11,
+      "name": "Director's Message",
+      "logo": "/images/contact.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 12,
+      "name": "Professional Developement",
+      "logo": "/images/Home/pd.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 13,
+      "name": "Alternate Education",
+      "logo": "/images/Home/ae.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 14,
+      "name": "Parent Instruction",
+      "logo": "/images/Watson/pp.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 15,
+      "name": "Student Instruction",
+      "logo": "/images/Watson/si.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 21,
+      "name": "Time Table 6th - 7th",
+      "logo": "/images/contact.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 22,
+      "name": "Time Table 8th - 10th",
+      "logo": "/images/contact.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 23,
+      "name": "Time Table 11th - 12th",
+      "logo": "/images/contact.jpg",
+      "isSelected": false
+    },
+    {
+      "id": 24,
+      "name": "Meeting 4 PM - 7 PM",
+      "logo": "/images/contact.jpg",
+      "isSelected": false
+    }
+  ],
+  "events": [
+    {
+      "id": 312,
+      "title": "Orientation Program 2025 - Goa Branch",
+      "content": "A Warm Welcome to Our New Academic Session! Date: 23rd March 2025 Time: 11 am Venue: Watson Academy",
+      "bullet1": "Study materials for the new session",
+      "bullet2": "Distribution of uniforms",
+      "bullet3": "Prospectus overview",
+      "bullet4": "Insights into our upcoming academic session",
+      "bullet5": "Meet our esteemed faculty members",
+      "contact": "WATSON ACADEMY",
+      "date": "19 March 2025"
+    },
+    {
+      "id": 1,
+      "title": "Watson Academy Aspirants",
+      "content": "We are excited to announce that our CRASH COURSE for NEET program will commence on 12th March and will run for 50 days.",
+      "bullet1": "Regular classes (Physics, Chemistry and Biology)",
+      "bullet2": "Alternate day mock tests (25 mock tests in total)",
+      "bullet3": "00-hour revision classes covering the entire syllabus",
+      "bullet4": "",
+      "bullet5": "",
+      "contact": "This is a crucial period for your NEET preparation, and we urge every student to make the most of it. Our dedicated faculty and team are committed to supporting and guiding you to achieve your goals.",
+      "date": "27 Februray 2025"
+    }
+  ],
+  "selectedEvent": "",
+  "headlines": [
+    {
+      "id": 913,
+      "title": "Admissions are NOW OPEN",
+      "content": "Admissions are NOW OPEN for classes 6th to 12th at Watson Academy!",
+      "bullet1": "Join us for the new session starting on 23rd March",
+      "bullet2": "Share with friends & family who may be interested",
+      "bullet3": "Don't miss this opportunity!",
+      "bullet4": "Register now and secure your child's future!",
+      "bullet5": "",
+      "contact": "Contact us: 9834443445/ 9767940053",
+      "date": "16 March 2025"
+    },
+    {
+      "id": 1,
+      "title": "Urgently Hiring for a Typist",
+      "content": "Watson Academy, Goa is looking for a skilled typist to join our team. Immediate joiners required.",
+      "bullet1": "Candidate should have Good typing speed and accuracy",
+      "bullet2": "Basic Computer knowledge",
+      "bullet3": "Attention to details",
+      "bullet4": "Prior experience preferred (not mandatory)",
+      "bullet5": "",
+      "contact": "Interested candidates, please contact us ASAP on 9767940053",
+      "date": "25 Februray 2025"
+    }
+  ],
+  "selectedHeadline": "",
+  "courses": [
+    {
+      "name": "Basic Courses",
+      "logo": "/images/Courses/basic.jpg",
+      "isSelected": false
+    },
+    {
+      "name": "Silent Features",
+      "logo": "/images/Courses/silent.jpg",
+      "isSelected": false
+    },
+    {
+      "name": "Special Courses",
+      "logo": "/images/Courses/special.jpg",
+      "isSelected": false
+    }
+  ],
+  "posters": [
+    {
+      "id": 82,
+      "logo": "/images/Posters/image82.jpg"
+    },
+    {
+      "id": 443,
+      "logo": "/images/Posters/image443.jpg"
+    },
+    {
+      "id": 4,
+      "logo": "/images/Posters/image4.jpg"
+    },
+    {
+      "id": 3,
+      "logo": "/images/Posters/image3.jpg"
+    },
+    {
+      "id": 2,
+      "logo": "/images/Posters/image2.jpg"
+    },
+    {
+      "id": 1,
+      "logo": "/images/Posters/image1.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "id": 2,
+      "logo": "/videos/video2.mp4"
+    },
+    {
+      "id": 1,
+      "logo": "/videos/video1.mp4"
+    }
+  ],
+  "posts": [
+    {
+      "id": 4,
+      "message": "Regular test and discussion improved me a lot.",
+      "by": "Ayush (Class XI)",
+      "date": "5 May 2024"
+    },
+    {
+      "id": 3,
+      "message": "Personal attension and 24*7 availability of faculties worked for me.",
+      "by": "Kirti (Class IX)",
+      "date": "1 January 2024"
+    },
+    {
+      "id": 2,
+      "message": "Watson made our parent active participant in our studies.",
+      "by": "Abhishek (Class XII)",
+      "date": "25 December 2023"
+    },
+    {
+      "id": 1,
+      "message": "Thanks to Watson Academy for making our journey simple with less Complication in Complicated Subject.",
+      "by": "Ankita & Chetna (Class XII)",
+      "date": "25 July 2022"
+    }
+  ],
+  "selectedPost": "",
+  "enquiries": [],
+  "classes": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "subjects": [
+    {
+      "code": "BIO",
+      "name": "Biology"
+    },
+    {
+      "code": "CHE",
+      "name": "Chemistry"
+    },
+    {
+      "code": "MAT",
+      "name": "Maths"
+    },
+    {
+      "code": "PHY",
+      "name": "Physics"
+    },
+    {
+      "code": "SCI",
+      "name": "Science"
+    },
+    {
+      "code": "C + T",
+      "name": "Class + Test"
+    }
+  ],
+  "timetables": [
+    {
+      "id": 1,
+      "standard": 6,
+      "hours": "5:00 PM - 6:00 PM",
+      "start": "17",
+      "startHour": "00",
+      "end": "18",
+      "endHour": "00",
+      "subjects": [
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "C + T"
+      ]
+    },
+    {
+      "id": 2,
+      "standard": 6,
+      "hours": "6:00 PM - 7:00 PM",
+      "start": "18",
+      "startHour": "00",
+      "end": "19",
+      "endHour": "00",
+      "subjects": [
+        "SCI",
+        "SCI",
+        "SCI",
+        "SCI",
+        "SCI",
+        "SCI",
+        "C + T"
+      ]
+    },
+    {
+      "id": 3,
+      "standard": 7,
+      "hours": "5:00 PM - 6:00 PM",
+      "start": "17",
+      "startHour": "00",
+      "end": "18",
+      "endHour": "00",
+      "subjects": [
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "C + T"
+      ]
+    },
+    {
+      "id": 4,
+      "standard": 7,
+      "hours": "6:00 PM - 7:00 PM",
+      "start": "18",
+      "startHour": "00",
+      "end": "19",
+      "endHour": "00",
+      "subjects": [
+        "BIO",
+        "CHE",
+        "PHY",
+        "BIO",
+        "CHE",
+        "PHY",
+        "C + T"
+      ]
+    },
+    {
+      "id": 5,
+      "standard": 8,
+      "hours": "5:00 PM - 6:00 PM",
+      "start": "17",
+      "startHour": "00",
+      "end": "18",
+      "endHour": "00",
+      "subjects": [
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "C + T"
+      ]
+    },
+    {
+      "id": 6,
+      "standard": 8,
+      "hours": "6:00 PM - 7:00 PM",
+      "start": "18",
+      "startHour": "00",
+      "end": "19",
+      "endHour": "00",
+      "subjects": [
+        "SCI",
+        "SCI",
+        "SCI",
+        "SCI",
+        "SCI",
+        "SCI",
+        "C + T"
+      ]
+    },
+    {
+      "id": 7,
+      "standard": 9,
+      "hours": "5:00 PM - 6:00 PM",
+      "start": "17",
+      "startHour": "00",
+      "end": "18",
+      "endHour": "00",
+      "subjects": [
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "C + T"
+      ]
+    },
+    {
+      "id": 8,
+      "standard": 9,
+      "hours": "6:00 PM - 7:00 PM",
+      "start": "18",
+      "startHour": "00",
+      "end": "19",
+      "endHour": "00",
+      "subjects": [
+        "BIO",
+        "CHE",
+        "PHY",
+        "BIO",
+        "CHE",
+        "PHY",
+        "C + T"
+      ]
+    },
+    {
+      "id": 9,
+      "standard": 10,
+      "hours": "6:00 PM - 7:00 PM",
+      "start": "18",
+      "startHour": "00",
+      "end": "19",
+      "endHour": "00",
+      "subjects": [
+        "BIO",
+        "BIO",
+        "CHE",
+        "CHE",
+        "PHY",
+        "PHY",
+        "C + T"
+      ]
+    },
+    {
+      "id": 10,
+      "standard": 10,
+      "hours": "6:00 PM - 7:00 PM",
+      "start": "18",
+      "startHour": "00",
+      "end": "19",
+      "endHour": "00",
+      "subjects": [
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "MAT",
+        "C + T"
+      ]
+    },
+    {
+      "id": 11,
+      "standard": 11,
+      "hours": "6:00 AM - 7:00 AM",
+      "start": "06",
+      "startHour": "00",
+      "end": "07",
+      "endHour": "00",
+      "subjects": [
+        "PHY",
+        "CHE",
+        "PHY",
+        "CHE",
+        "PHY",
+        "CHE",
+        "C + T"
+      ]
+    },
+    {
+      "id": 12,
+      "standard": 11,
+      "hours": "5:00 PM - 7:30 PM",
+      "start": "17",
+      "startHour": "00",
+      "end": "19",
+      "endHour": "30",
+      "subjects": [
+        "MAT",
+        "BIO",
+        "MAT",
+        "BIO",
+        "MAT",
+        "BIO",
+        "C + T"
+      ]
+    },
+    {
+      "id": 13,
+      "standard": 12,
+      "hours": "6:00 AM - 7:00 AM",
+      "start": "06",
+      "startHour": "00",
+      "end": "07",
+      "endHour": "00",
+      "subjects": [
+        "PHY",
+        "CHE",
+        "PHY",
+        "CHE",
+        "PHY",
+        "CHE",
+        "C + T"
+      ]
+    },
+    {
+      "id": 14,
+      "standard": 12,
+      "hours": "5:00 PM - 7:30 PM",
+      "start": "17",
+      "startHour": "00",
+      "end": "19",
+      "endHour": "30",
+      "subjects": [
+        "BIO",
+        "MAT",
+        "BIO",
+        "MAT",
+        "BIO",
+        "MAT",
+        "C + T"
+      ]
+    }
+  ],
+  "banner": {
+    "isDisplayed": false,
+    "message": "",
+    "position": ""
+  },
+  "users": [
+    {
+      "mobile": "8412011412",
+      "email": "monu.bits@gmail.com",
+      "firstname": "Naveen",
+      "lastname": "Jangir",
+      "password": "1111"
+    },
+    {
+      "mobile": "9860950561",
+      "email": "sonuv002@gmail.com",
+      "firstname": "Ravindra",
+      "lastname": "Jangir",
+      "password": "2222"
+    },
+    {
+      "mobile": "9784461021",
+      "email": "bsjangir@gmail.com",
+      "firstname": "Bahadur Singh",
+      "lastname": "Jangir",
+      "password": "3333"
+    },
+    {
+      "mobile": "9767940053",
+      "email": "neetujangir@gmail.com",
+      "firstname": "Neetu",
+      "lastname": "Jangir",
+      "password": "Wats0n@0053"
+    }
+  ],
+  "visitors": [
+    "103.197.74.220",
+    "42.104.220.97",
+    "103.197.75.163",
+    "203.99.214.80",
+    "152.59.11.123",
+    "103.197.75.12",
+    "103.197.75.167",
+    "152.59.11.10",
+    "172.225.186.6",
+    "152.59.10.123",
+    "152.59.12.87",
+    "152.59.11.112",
+    "152.59.11.194",
+    "152.59.11.96",
+    "103.197.75.212",
+    "42.104.222.26",
+    "42.104.222.50",
+    "42.104.222.101",
+    "42.104.222.6",
+    "42.104.224.40",
+    "10.1.1.74",
+    "10.1.11.149",
+    "10.1.0.10",
+    "42.104.222.12",
+    "42.104.222.252",
+    "10.1.11.144",
+    "10.1.11.132",
+    "152.59.12.147",
+    "49.15.234.10",
+    "42.104.220.121",
+    "49.15.231.46",
+    "43.249.184.81",
+    "42.107.86.35",
+    "42.107.86.16",
+    "103.197.75.178",
+    "43.249.184.165",
+    "42.104.227.237",
+    "42.104.216.49",
+    "152.59.11.161",
+    "103.186.246.196",
+    "43.249.184.220",
+    "66.249.66.9",
+    "66.249.66.7",
+    "152.59.189.39",
+    "66.249.66.8",
+    "152.59.189.215",
+    "152.59.189.87"
+  ]
+}
