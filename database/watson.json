@@ -99,6 +99,18 @@
   ],
   "events": [
     {
+      "id": 151,
+      "title": "Orientation Program 2025 - Karwar Branch",
+      "content": "A Warm Welcome to Our New Academic Session! 22nd March 2025 Time: 10:30 am Venue: NCS Audi",
+      "bullet1": "Meet our esteemed faculty members",
+      "bullet2": "Study materials for the new session",
+      "bullet3": "Distribution of uniforms",
+      "bullet4": "Prospectus overview",
+      "bullet5": "Insights into our upcoming academic session",
+      "contact": "WATSON ACADEMY",
+      "date": "21 March 2025"
+    },
+    {
       "id": 312,
       "title": "Orientation Program 2025 - Goa Branch",
       "content": "A Warm Welcome to Our New Academic Session! Date: 23rd March 2025 Time: 11 am Venue: Watson Academy",
@@ -125,6 +137,18 @@
   ],
   "selectedEvent": "",
   "headlines": [
+    {
+      "id": 72,
+      "title": "Orientation Program 2025",
+      "content": "22nd March 2025 - Karwar and 23rd March 2025 - Goa",
+      "bullet1": "Orientation Program for Students and Parents",
+      "bullet2": "",
+      "bullet3": "",
+      "bullet4": "",
+      "bullet5": "",
+      "contact": "WATSON ACADEMY",
+      "date": "21 March 2025"
+    },
     {
       "id": 913,
       "title": "Admissions are NOW OPEN",
@@ -168,7 +192,44 @@
       "isSelected": false
     }
   ],
+  "photos": [
+    {
+      "id": 82,
+      "logo": "/images/Posters/image82.jpg",
+      "name": "EVENT 1"
+    },
+    {
+      "id": 443,
+      "logo": "/images/Posters/image443.jpg",
+      "name": "EVENT 1"
+    },
+    {
+      "id": 4,
+      "logo": "/images/Posters/image4.jpg",
+      "name": "EVENT 1"
+    },
+    {
+      "id": 3,
+      "logo": "/images/Posters/image3.jpg",
+      "name": "EVENT 2"
+    },
+    {
+      "id": 2,
+      "logo": "/images/Posters/image2.jpg",
+      "name": "EVENT 2"
+    },
+    {
+      "id": 1,
+      "logo": "/images/Posters/image1.jpg",
+      "name": "EVENT 2"
+    }
+  ],
   "posters": [
+    {
+      "id": 796,
+      "logo": "/images/Posters/image796.jpg",
+      "isSelected": false
+    },
     {
       "id": 82,
       "logo": "/images/Posters/image82.jpg"
@@ -206,22 +267,64 @@
   ],
   "posts": [
     {
-      "id": 4,
+      "id": 11,
       "message": "Regular test and discussion improved me a lot.",
       "by": "Ayush (Class XI)",
       "date": "5 May 2024"
     },
     {
-      "id": 3,
+      "id": 10,
+      "message": "Watson made our parent active participant in our studies.",
+      "by": "Abhishek (Class XII)",
+      "date": "25 April 2024"
+    },
+    {
+      "id": 9,
       "message": "Personal attension and 24*7 availability of faculties worked for me.",
       "by": "Kirti (Class IX)",
+      "date": "17 Februray 2024"
+    },
+    {
+      "id": 8,
+      "message": "We Got everything we asked for. Thank you Watson.",
+      "by": "Rohini (Class XII)",
+      "date": "13 Februray 2024"
+    },
+    {
+      "id": 7,
+      "message": "I never came across a doubt i unsolved for more than 1 year.",
+      "by": "Swati (Class XII)",
       "date": "1 January 2024"
     },
     {
+      "id": 6,
+      "message": "Teaching was such that we visualised everything in class.",
+      "by": "Sagarika (Class XII)",
+      "date": "1 November 2023"
+    },
+    {
+      "id": 5,
+      "message": "I own my success to my parents blessings and highly dedicated faculties of Watson.",
+      "by": "Vedang (Class XII)",
+      "date": "20 November 2023"
+    },
+    {
+      "id": 4,
+      "message": "Concept learning is better experience with Watson.",
+      "by": "Abhinav (Class XII)",
+      "date": "7 Auguest 2023"
+    },
+    {
+      "id": 3,
+      "message": "Guidence and support of Watson harnessed of me.",
+      "by": "Shubham (Class XII)",
+      "date": "30 Mar 2023"
+    },
+    {
       "id": 2,
-      "message": "Watson made our parent active participant in our studies.",
-      "by": "Abhishek (Class XII)",
-      "date": "25 December 2023"
+      "message": "Watson gave me world, me and my parents dreamt of.",
+      "by": "Akansha (Class XII)",
+      "date": "11 January 2023"
     },
     {
       "id": 1,
@@ -603,6 +706,28 @@
     "152.59.189.39",
     "66.249.66.8",
     "152.59.189.215",
-    "152.59.189.87"
+    "152.59.189.87",
+    "66.249.66.6",
+    "103.197.75.224",
+    "66.249.66.5",
+    "152.59.102.79",
+    "103.167.128.99",
+    "223.233.85.107",
+    "40.77.190.93",
+    "106.193.202.67",
+    "66.249.66.4",
+    "103.167.129.83",
+    "103.197.74.213",
+    "66.249.79.5",
+    "42.104.228.162",
+    "40.77.188.76",
+    "66.249.68.70",
+    "66.249.79.6",
+    "66.249.79.193",
+    "66.249.79.7",
+    "157.45.242.157",
+    "152.59.88.188",
+    "52.45.146.35",
+    "117.99.246.187"
   ]
 }
