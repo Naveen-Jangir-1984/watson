@@ -226,6 +226,11 @@
   ],
   "posters": [
     {
+      "id": 719,
+      "logo": "/images/Posters/image719.jpg",
+      "isSelected": false
+    },
+    {
       "id": 661,
       "logo": "/images/Posters/image661.jpg",
       "isSelected": false
@@ -654,28 +659,32 @@
       "email": "monu.bits@gmail.com",
       "firstname": "Naveen",
       "lastname": "Jangir",
-      "password": "1111"
+      "password": "njangir",
+      "attempts": 0
     },
     {
       "mobile": "9860950561",
       "email": "sonuv002@gmail.com",
       "firstname": "Ravindra",
       "lastname": "Jangir",
-      "password": "2222"
+      "password": "rjangir",
+      "attempts": 0
     },
     {
       "mobile": "9784461021",
       "email": "bsjangir@gmail.com",
       "firstname": "Bahadur Singh",
       "lastname": "Jangir",
-      "password": "3333"
+      "password": "bjangir",
+      "attempts": 0
     },
     {
       "mobile": "9767940053",
       "email": "neetujangir@gmail.com",
       "firstname": "Neetu",
       "lastname": "Jangir",
-      "password": "Wats0n@0053"
+      "password": "Wats0n@0053",
+      "attempts": 0
     }
   ],
   "visitors": [
@@ -1253,6 +1262,7 @@
     "106.220.181.153",
     "69.171.251.9",
     "152.57.105.217",
-    "103.197.75.31"
+    "103.197.75.31",
+    "103.150.52.131"
   ]
 }

@@ -477,6 +477,35 @@ app.post(`${resource}/addUser`, (req, res) => {
   });
 });
 
+app.post(`${resource}/attempts`, (req, res) => {
+  fs.readFile(database, (err, data) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    db = JSON.parse(data);
+    const username = decryptData(req.body.username);
+    const password = decryptData(req.body.password);
+    let attempts = 0;
+    db.users = db.users.map((user) => {
+      if (user.mobile === username || user.email === username) {
+        if (user.password === password && user.attempts < 3) {
+          user.attempts = 0;
+          attempts = 0;
+        } else {
+          user.attempts = user.attempts + 1;
+          attempts = user.attempts;
+        }
+      }
+      return user;
+    });
+    fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success", attempts: attempts }));
+    });
+  });
+});
+
 // ---------- WATSON ----------
 
 // app.listen(port, () => {
