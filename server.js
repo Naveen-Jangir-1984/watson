@@ -1,11 +1,11 @@
 const CryptoJS = require("crypto-js");
 const express = require("express");
-const multer = require('multer');
+const multer = require("multer");
 const path = require("path");
 const https = require("https");
 const bodyParser = require("body-parser");
 const fs = require("fs");
-const cors = require('cors');
+const cors = require("cors");
 const app = express();
 
 app.use(cors());
@@ -19,8 +19,8 @@ require("dotenv").config();
 const port = process.env.REACT_APP_PORT;
 const secretKey = process.env.REACT_APP_SECRET_KEY;
 
-const resource = '/api/watson';
-const database = './database/watson.json';
+const resource = "/api/watson";
+const database = "./database/watson.json";
 
 const options = {
   key: fs.readFileSync("./certificate.key"),
@@ -56,11 +56,11 @@ app.get("/events", (req, res) => {
         headlines: db.headlines,
         events: db.events,
         posters: db.posters,
-        users: db.users
-      }
+        users: db.users,
+      };
       res.write(`data: ${encryptData(feed)}\n\n`);
     });
-  }, 10000);
+  }, 10 * 1000);
 });
 
 app.get(`${resource}/data`, (req, res) => {
@@ -70,13 +70,13 @@ app.get(`${resource}/data`, (req, res) => {
       return;
     }
     const db = JSON.parse(data);
-    const remoteAddress = req.socket.remoteAddress.split('::ffff:')[1];
-    if(!db.visitors.includes(remoteAddress)) {
+    const remoteAddress = req.socket.remoteAddress.split("::ffff:")[1];
+    if (!db.visitors.includes(remoteAddress)) {
       db.visitors = [...db.visitors, remoteAddress];
       fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-        if (err) res.send({ result: 'failed' });
+        if (err) res.send({ result: "failed" });
         // res.send({ result: 'success' });
-      });      
+      });
     }
     res.send(encryptData(db));
   });
@@ -92,8 +92,8 @@ app.post(`${resource}/addFeedback`, (req, res) => {
     const feedback = req.body.feedback;
     db.posts = [decryptData(feedback), ...db.posts];
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -106,10 +106,10 @@ app.post(`${resource}/deleteFeedback`, (req, res) => {
     }
     db = JSON.parse(data);
     const id = req.body.id;
-    db.posts = db.posts.filter(post => post.id !== id);
+    db.posts = db.posts.filter((post) => post.id !== id);
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send({ result: 'failed' });
-      res.send({ result: 'success' });
+      if (err) res.send({ result: "failed" });
+      res.send({ result: "success" });
     });
   });
 });
@@ -124,8 +124,8 @@ app.post(`${resource}/addEvent`, (req, res) => {
     const event = req.body.event;
     db.events = [decryptData(event), ...db.events];
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -138,10 +138,10 @@ app.post(`${resource}/deleteEvent`, (req, res) => {
     }
     db = JSON.parse(data);
     const id = req.body.id;
-    db.events = db.events.filter(event => event.id !== id);
+    db.events = db.events.filter((event) => event.id !== id);
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send({ result: 'failed' });
-      res.send({ result: 'success' });
+      if (err) res.send({ result: "failed" });
+      res.send({ result: "success" });
     });
   });
 });
@@ -156,8 +156,8 @@ app.post(`${resource}/addHeadline`, (req, res) => {
     const headline = req.body.headline;
     db.headlines = [decryptData(headline), ...db.headlines];
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -170,10 +170,10 @@ app.post(`${resource}/deleteHeadline`, (req, res) => {
     }
     db = JSON.parse(data);
     const id = req.body.id;
-    db.headlines = db.headlines.filter(headline => headline.id !== id);
+    db.headlines = db.headlines.filter((headline) => headline.id !== id);
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send({ result: 'failed' });
-      res.send({ result: 'success' });
+      if (err) res.send({ result: "failed" });
+      res.send({ result: "success" });
     });
   });
 });
@@ -188,8 +188,8 @@ app.post(`${resource}/addEnquiry`, (req, res) => {
     const enquiry = req.body.enquiry;
     db.enquiries = [decryptData(enquiry), ...db.enquiries];
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -201,13 +201,13 @@ app.post(`${resource}/resetEnquiry`, (req, res) => {
       return;
     }
     db = JSON.parse(data);
-    db.enquiries.map(enquiry => {
-      enquiry.status = 'read'
+    db.enquiries.map((enquiry) => {
+      enquiry.status = "read";
       return enquiry;
     });
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -220,10 +220,10 @@ app.post(`${resource}/deleteEnquiry`, (req, res) => {
     }
     db = JSON.parse(data);
     const id = decryptData(req.body.id);
-    db.enquiries = db.enquiries.filter(enquiry => enquiry.id !== id);
+    db.enquiries = db.enquiries.filter((enquiry) => enquiry.id !== id);
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -236,21 +236,21 @@ app.post(`${resource}/updateTimeTable`, (req, res) => {
     }
     db = JSON.parse(data);
     const timetable = decryptData(req.body.timetable);
-    db.timetables.forEach(tt => {
-      if(tt.id === timetable.id) {
+    db.timetables.forEach((tt) => {
+      if (tt.id === timetable.id) {
         tt.standard = timetable.standard;
         tt.hours = timetable.hours;
         tt.start = timetable.start;
         tt.startHour = timetable.startHour;
         tt.end = timetable.end;
         tt.endHour = timetable.endHour;
-        tt.subjects = timetable.subjects
+        tt.subjects = timetable.subjects;
       }
       return timetable;
     });
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -266,8 +266,8 @@ app.post(`${resource}/addTimeTable`, (req, res) => {
     const timetable = decryptData(req.body.timetable);
     db.timetables = [...db.timetables.slice(0, index), timetable, ...db.timetables.slice(index)];
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -280,10 +280,10 @@ app.post(`${resource}/deleteTimeTable`, (req, res) => {
     }
     db = JSON.parse(data);
     const id = decryptData(req.body.id);
-    db.timetables = db.timetables.filter(timetable => timetable.id !== id);
+    db.timetables = db.timetables.filter((timetable) => timetable.id !== id);
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -309,40 +309,40 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => {
     const folderPathFile = path.join(__dirname, "public/images/Posters");
     const folderPathVideo = path.join(__dirname, "public/videos");
-    if(file.mimetype.startsWith('image/')) {
+    if (file.mimetype.startsWith("image/")) {
       fs.readdir(folderPathFile, (err, files) => {
         if (err) {
           console.error("Error reading directory:", err);
           return cb(err);
         }
-        const fileIds = files.filter(file => {
-          if(file.startsWith('image')) {
-            return file.split('.')[0].substring(5);
+        const fileIds = files.filter((file) => {
+          if (file.startsWith("image")) {
+            return file.split(".")[0].substring(5);
           }
         });
         let randomId = Math.floor(Math.random() * 1000) + 1;
-        while(fileIds.includes(randomId)) {
+        while (fileIds.includes(randomId)) {
           randomId = Math.floor(Math.random() * 1000) + 1;
-        };
+        }
         const extension = path.extname(file.originalname);
         const fileName = `image${randomId}${extension}`;
         cb(null, fileName);
       });
-    } else if(file.mimetype.startsWith('video/')) {
+    } else if (file.mimetype.startsWith("video/")) {
       fs.readdir(folderPathVideo, (err, files) => {
         if (err) {
           console.error("Error reading directory:", err);
           return cb(err);
         }
-        const fileIds = files.filter(file => {
-          if(file.startsWith('video')) {
-            return file.split('.')[0].substring(5);
+        const fileIds = files.filter((file) => {
+          if (file.startsWith("video")) {
+            return file.split(".")[0].substring(5);
           }
         });
         let randomId = Math.floor(Math.random() * 1000) + 1;
-        while(fileIds.includes(randomId)) {
+        while (fileIds.includes(randomId)) {
           randomId = Math.floor(Math.random() * 1000) + 1;
-        };
+        }
         const extension = path.extname(file.originalname);
         const fileName = `video${randomId}${extension}`;
         cb(null, fileName);
@@ -352,25 +352,25 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage, limits: { fileSize: 500 * 1024 * 1024 } });
 
-app.post(`${resource}/addPoster`, upload.single('file'), (req, res) => {
+app.post(`${resource}/addPoster`, upload.single("file"), (req, res) => {
   fs.readFile(database, (err, data) => {
     if (err) {
       console.error(err);
       return;
     }
-    
+
     db = JSON.parse(data);
     const filename = req.file.filename;
-    const id = Number(filename.split('.')[0].substring(5));
+    const id = Number(filename.split(".")[0].substring(5));
     const newPoster = {
       id: id,
       logo: `/images/Posters/${filename}`,
-      isSelected: false
+      isSelected: false,
     };
     db.posters = [newPoster, ...db.posters];
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -399,32 +399,32 @@ app.post(`${resource}/deletePoster`, (req, res) => {
     }
     const id = decryptData(req.body.id);
     db = JSON.parse(data);
-    db.posters = db.posters.filter(poster => poster.id !== id);
+    db.posters = db.posters.filter((poster) => poster.id !== id);
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
 
-app.post(`${resource}/addVideo`, upload.single('file'), (req, res) => {
+app.post(`${resource}/addVideo`, upload.single("file"), (req, res) => {
   fs.readFile(database, (err, data) => {
     if (err) {
       console.error(err);
       return;
     }
-    
+
     db = JSON.parse(data);
     const filename = req.file.filename;
-    const id = Number(filename.split('.')[0].substring(5));
+    const id = Number(filename.split(".")[0].substring(5));
     const newVideo = {
       id: id,
       logo: `/videos/${filename}`,
     };
     db.videos = [newVideo, ...db.videos];
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -453,10 +453,10 @@ app.post(`${resource}/deleteVideo`, (req, res) => {
     }
     const id = decryptData(req.body.id);
     db = JSON.parse(data);
-    db.videos = db.videos.filter(video => video.id !== id);
+    db.videos = db.videos.filter((video) => video.id !== id);
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
@@ -471,8 +471,8 @@ app.post(`${resource}/addUser`, (req, res) => {
     const user = req.body.user;
     db.users = [...db.users, decryptData(user)];
     fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
-      if (err) res.send(encryptData({ result: 'failed' }));
-      res.send(encryptData({ result: 'success' }));
+      if (err) res.send(encryptData({ result: "failed" }));
+      res.send(encryptData({ result: "success" }));
     });
   });
 });
