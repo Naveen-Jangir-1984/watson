@@ -70,8 +70,24 @@ app.get(`${resource}/data`, (req, res) => {
       return;
     }
     const db = JSON.parse(data);
-    const remoteAddress = req.socket.remoteAddress.split("::ffff:")[1];
-    if (!db.visitors.includes(remoteAddress)) {
+    const remoteAddress = req.socket.remoteAddress.split("::ffff:")[1] + "; " + new Date().toISOString().split("T")[0];
+    // if (!db.visitors.includes(remoteAddress)) {
+    //   db.visitors = [...db.visitors, remoteAddress];
+    //   fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
+    //     if (err) res.send({ result: "failed" });
+    //     // res.send({ result: 'success' });
+    //   });
+    // }
+    // res.send(encryptData(db));
+    const removeAddressSplit = remoteAddress.split(".");
+    let flag = true;
+    for (const visitor of db.visitors) {
+      const visitorSplit = visitor.split(".");
+      if (visitorSplit[0] === removeAddressSplit[0] && visitorSplit[1] === removeAddressSplit[1] && visitorSplit[2] === removeAddressSplit[2]) {
+        flag = false;
+      }
+    }
+    if (flag) {
       db.visitors = [...db.visitors, remoteAddress];
       fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
         if (err) res.send({ result: "failed" });
