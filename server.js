@@ -70,7 +70,7 @@ app.get(`${resource}/data`, (req, res) => {
       return;
     }
     const db = JSON.parse(data);
-    const remoteAddress = req.socket.remoteAddress.split("::ffff:")[1] + "; " + new Date().toISOString().split("T")[0];
+    const remoteAddress = (req.socket && req.socket.remoteAddress ? req.socket.remoteAddress.split("::ffff:")[1] : "unknown") + "; " + new Date().toISOString().split("T")[0];
     // if (!db.visitors.includes(remoteAddress)) {
     //   db.visitors = [...db.visitors, remoteAddress];
     //   fs.writeFile(database, JSON.stringify(db, null, 2), (err) => {
